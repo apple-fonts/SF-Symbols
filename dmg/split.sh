@@ -3,7 +3,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-splitSize=50MB # do not exceed 50MB as recommended by GitHub
+splitSize=49MB # do not exceed 50MB as recommended by GitHub
 
 fileToSplit=$1
 split --verbose "$fileToSplit" -b $splitSize -d SF-Symbols-2.1.dmg
