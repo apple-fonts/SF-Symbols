@@ -6,4 +6,4 @@ fi
 splitSize=49MB # do not exceed 50MB as recommended by GitHub
 
 fileToSplit=$1
-split --verbose "$fileToSplit" -b $splitSize -d SF-Symbols-2.1.dmg
+split --verbose "$fileToSplit" -b $splitSize -d "$fileToSplit" # use numerical suffix
