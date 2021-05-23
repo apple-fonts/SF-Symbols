@@ -24,6 +24,12 @@ make clean
 This removes the two .dmg files listed above.
 
 ## Procedure to generate the .dmg files
+This part describes what happens when you type
+```shell
+make -B -j
+```
+as provided in the previous section.
+
 1. The `make` program looks for the split .dmg files (`*.dmg{00,01,...}`). If the split .dmg files are found, then it invokes `cat` to concatenate the split .dmg files together. Otherwise, head directly to step 2.
 2. The program invokes `wget` to check the .dmg files on the Apple server, and see if the server side has updated the corresponding files. If yes, then the new versions will be downloaded. Otherwise, nothing will be downloaded.
 3. The program then splits the .dmg file into smaller volumes (`*.dmg{00,01,...}`). If the .dmg file was updated, then the original split files will also be overwritten.
