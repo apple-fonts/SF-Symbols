@@ -12,7 +12,7 @@ all: $(all)
 	dmg2img "$<" "$@"
 
 %.dmg:
-	bash make-dmg.sh $@
+	bash make-dmg.sh "$@"
 
 .PHONY: clean
 clean:
