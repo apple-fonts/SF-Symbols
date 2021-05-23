@@ -17,3 +17,7 @@ all: $(all)
 .PHONY: clean
 clean:
 	-rm -rfv $(all)
+
+.PHONY: rmsplit
+rmsplit:
+	-rm -rfv $(foreach dmg_file,$(dmg),$(dmg_file)??)
