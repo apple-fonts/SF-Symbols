@@ -1,4 +1,4 @@
-# .dmg files directory
+# .dmg and .img files directory
 This directory stores the URL files (`.url`) and split .dmg files (`.dmg{00,01,...}`). They are used to generate the .dmg and .img files.
 
 Currently available .dmg files:
