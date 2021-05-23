@@ -14,7 +14,7 @@ To generate the .img files, you must have the following programs installed:
 * [`dmg2img`](http://vu1tur.eu.org/tools/)
 
 
-## Available operations
+## Making .dmg and .img files
 
 ### Generating .dmg and .img files
 To generate all .dmg and .img files:
@@ -44,7 +44,7 @@ make clean
 ```
 This removes the two .dmg files listed above.
 
-### Remove the split .dmg files
+### Removing the split .dmg files
 ```shell
 make rmsplit
 ```
