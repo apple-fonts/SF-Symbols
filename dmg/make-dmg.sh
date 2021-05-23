@@ -29,6 +29,9 @@ function split_dmg {
   dmgFile=$1
   splitSize=49MB # just below the 50MB limit, as recommended by GitHub
 
+  # delete the original split .dmg files
+  find -regex ".*/$dmgFile[0-9]+" -delete
+
   split --verbose "$dmgFile" -b $splitSize -d "$dmgFile" # use numerical suffix
 }
 
