@@ -13,7 +13,7 @@ The corresponding .img files are:
 To generate the .img files, you must have the following programs installed:
 * [`dmg2img`](http://vu1tur.eu.org/tools/)
 
-## Available commands
+## Generating .dmg and .img files
 To generate all .dmg and .img files:
 ```shell
 make -B -j
@@ -35,7 +35,7 @@ make clean
 ```
 This removes the two .dmg files listed above.
 
-## Procedure to generate the .dmg and .img files
+### Procedure to generate the .dmg and .img files
 This part describes what happens when you type
 ```shell
 make -B -j
