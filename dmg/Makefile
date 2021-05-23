@@ -6,8 +6,8 @@ all = $(SFS).dmg $(SFS21).dmg
 .PHONY: all
 all: $(all)
 
-%.dmg: %.url
-	wget -N -i $<
+%.dmg:
+	bash make-dmg.sh $@
 
 .PHONY: clean
 clean:
