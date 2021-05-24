@@ -1,5 +1,5 @@
 if [ $# -lt 1 ]; then
-  echo "Usage: bash \"$0\" <dmg_path.dmg>"
+  echo "Usage: bash \"$0\" \"path/to/dmg.dmg\""
   exit 1
 fi
 
