@@ -1,9 +1,9 @@
 SFS := SF-Symbols
 SFS21 := SF-Symbols-2.1
 
-all = $(dmg) $(img)
-dmg = $(SFS).dmg $(SFS21).dmg
-img = $(dmg:.dmg=.img)
+all = $(dmg_files) $(img_files)
+dmg_files := $(SFS).dmg $(SFS21).dmg
+img_files := $(dmg_files:.dmg=.img)
 
 make_dmg_exec := make-dmg.sh
 
@@ -22,4 +22,4 @@ clean:
 
 .PHONY: rmsplit
 rmsplit:
-	-rm -rfv $(foreach dmg_file,$(dmg),$(dmg_file)??)
+	-rm -rfv $(foreach dmg_file,$(dmg_files),$(dmg_file)??)
