@@ -5,6 +5,8 @@ all = $(dmg) $(img)
 dmg = $(SFS).dmg $(SFS21).dmg
 img = $(dmg:.dmg=.img)
 
+make_dmg_exec := make-dmg.sh
+
 .PHONY: all
 all: $(all)
 
@@ -12,7 +14,7 @@ all: $(all)
 	dmg2img "$<" "$@"
 
 %.dmg:
-	bash make-dmg.sh "$@"
+	bash "$(make_dmg_exec)" "$@"
 
 .PHONY: clean
 clean:
