@@ -11,8 +11,8 @@ dmgFile=$1
 # - .url file: SF-Symbols.url
 # - split .dmg files: SF-Symbols.dmg{00,01,...}
 function merge_splits {
-  dmgFile=$1
-  splitFiles=$(find -regex ".*/$dmgFile[0-9]+" | sort)
+  local dmgFile=$1
+  local splitFiles=$(find -regex ".*/$dmgFile[0-9]+" | sort)
 
   if [ -n "$splitFiles" ]; then
     echo "Merging these files into \"$dmgFile\":"
@@ -26,8 +26,8 @@ function merge_splits {
 # - .dmg file: SF-Symbols.dmg
 # - split .dmg files: SF-Symbols.dmg{00,01,...}
 function split_dmg {
-  dmgFile=$1
-  splitSize=49MB # just below the 50MB limit, as recommended by GitHub
+  local dmgFile=$1
+  local splitSize=49MB # just below the 50MB limit, as recommended by GitHub
 
   # delete the original split .dmg files
   find -regex ".*/$dmgFile[0-9]+" -delete
@@ -37,8 +37,8 @@ function split_dmg {
 
 # get the .dmg file
 function get_dmg_file {
-  dmgFile=$1
-  urlFile=${dmgFile%.*}.url
+  local dmgFile=$1
+  local urlFile=${dmgFile%.*}.url
 
   # merge .dmg files
   merge_splits "$dmgFile"
