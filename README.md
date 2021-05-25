@@ -1,6 +1,8 @@
 # SF-Symbols
 This repository extract the fonts contained in Apple SF Symbols (https://developer.apple.com/sf-symbols/).
 
+![](screen-hero-large_2x.jpg)
+
 ## Extract
 ```shell
 make -j
