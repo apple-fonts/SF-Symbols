@@ -12,7 +12,7 @@ dmgFile="$1"
 # - split .dmg files: SF-Symbols.dmg{00,01,...}
 function merge_splits {
   local dmgFile="$1"
-  local splitFiles=$(find -regex ".*/$dmgFile[0-9]+" | sort)
+  local splitFiles="$(find -regex ".*/$dmgFile[0-9]+" | sort)"
 
   if [ -n "$splitFiles" ]; then
     echo "Merging these files into \"$dmgFile\":"
