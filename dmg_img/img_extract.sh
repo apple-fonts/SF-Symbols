@@ -1,5 +1,5 @@
 if [ $# -lt 2 ]; then
-  echo "Usage: \"$0\" \"path/to/img.img\" \"path/to/fonts\""
+  echo "Usage: bash \"$0\" \"<path_to_img.img>\" \"<path/to/fonts>\"" >&2
   exit 1
 fi
 
