@@ -3,7 +3,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-dmgFile=$1
+dmgFile="$1"
 
 # find split .dmg files, and merge them
 # Example:
@@ -11,13 +11,13 @@ dmgFile=$1
 # - .url file: SF-Symbols.url
 # - split .dmg files: SF-Symbols.dmg{00,01,...}
 function merge_splits {
-  local dmgFile=$1
+  local dmgFile="$1"
   local splitFiles=$(find -regex ".*/$dmgFile[0-9]+" | sort)
 
   if [ -n "$splitFiles" ]; then
     echo "Merging these files into \"$dmgFile\":"
-    echo $splitFiles
-    cat $splitFiles > $dmgFile
+    echo "$splitFiles"
+    cat "$splitFiles" > "$dmgFile"
   fi
 }
 
@@ -26,7 +26,7 @@ function merge_splits {
 # - .dmg file: SF-Symbols.dmg
 # - split .dmg files: SF-Symbols.dmg{00,01,...}
 function split_dmg {
-  local dmgFile=$1
+  local dmgFile="$1"
   local splitSize=49MB # just below the 50MB limit, as recommended by GitHub
 
   # delete the original split .dmg files
@@ -37,8 +37,8 @@ function split_dmg {
 
 # get the .dmg file
 function get_dmg_file {
-  local dmgFile=$1
-  local urlFile=${dmgFile%.*}.url
+  local dmgFile="$1"
+  local urlFile="${dmgFile%.*}.url"
 
   # merge .dmg files
   merge_splits "$dmgFile"
@@ -50,4 +50,4 @@ function get_dmg_file {
   split_dmg "$dmgFile"
 }
 
-get_dmg_file $dmgFile
+get_dmg_file "$dmgFile"
