@@ -17,7 +17,7 @@ function merge_splits {
   if [ -n "$splitFiles" ]; then
     echo "Merging these files into \"$dmgFile\":"
     echo "$splitFiles"
-    cat "$splitFiles" > "$dmgFile"
+    cat $splitFiles > "$dmgFile"
   fi
 }
 
