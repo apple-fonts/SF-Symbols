@@ -5,7 +5,7 @@ all = $(dmg_files) $(img_files)
 dmg_files := $(SFS).dmg $(SFS21).dmg
 img_files := $(dmg_files:.dmg=.img)
 
-make_dmg_exec := make-dmg.sh
+make_dmg_exec := make_dmg.sh
 
 .PHONY: all
 all: $(all)
