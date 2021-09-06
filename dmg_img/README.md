@@ -35,8 +35,8 @@ This command does the following jobs:
 * `make -B SF-Symbols-2.1.dmg`
 
 #### Making corresponding .img files
-* `make SF-Symbols.dmg`
-* `make SF-Symbols-2.1.dmg`
+* `make SF-Symbols.img`
+* `make SF-Symbols-2.1.img`
 
 ### Clean up
 ```shell
