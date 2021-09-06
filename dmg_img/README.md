@@ -9,10 +9,12 @@ The corresponding .img files are:
 * `SF-Symbols-2.1.img`
 * `SF-Symbols.img`
 
-## Prerequisites
-To generate the .img files, you must have the following programs installed:
-* [`dmg2img`](http://vu1tur.eu.org/tools/)
+Then you can extract fonts from the .img directory.
 
+## Prerequisites
+To generate the .img files and extract fonts, you must have the following packages installed:
+* [`dmg2img`](http://vu1tur.eu.org/tools/)
+* [`p7zip-full`](https://pkgs.org/download/p7zip-full)
 
 ## Making .dmg and .img files
 
@@ -49,3 +51,6 @@ This removes the two .dmg files listed above.
 make rmsplit
 ```
 This removes all of the `*.dmg{00,01,…}` files.
+
+## Extracting fonts
+Go to the upper directory and run `make` from there.
